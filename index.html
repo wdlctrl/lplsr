@@ -88,7 +88,7 @@
   .d3 { transition-delay:.36s; }
 
   /* ════════════════════════════════════════
-     P — PESSOA / PROBLEMA  →  HERO
+     HERO
   ════════════════════════════════════════ */
   .hero {
     min-height: 100vh;
@@ -122,7 +122,6 @@
     opacity:0; animation: fadeUp .6s ease .1s both;
   }
 
-  /* Linha diagnóstico — o herói se vê aqui */
   .hero-diagnosis {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(15px,2vw,18px);
@@ -155,7 +154,6 @@
     opacity:0; animation: fadeUp .6s ease .55s both;
   }
 
-  /* Promessa principal — o que o HERÓI vai conquistar */
   .hero-promise {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(20px,3vw,30px);
@@ -210,7 +208,7 @@
   }
 
   /* ════════════════════════════════════════
-     P — AMPLIFICAR O PROBLEMA  (StoryBrand: Dragão Externo + Interno + Filosófico)
+     PROBLEMA
   ════════════════════════════════════════ */
   .problema {
     padding: 120px 24px;
@@ -265,7 +263,7 @@
   }
 
   /* ════════════════════════════════════════
-     A — AMPLIFICAR O CUSTO DO NÃO-AGIR
+     AMPLIFY
   ════════════════════════════════════════ */
   .amplify {
     padding: 100px 24px;
@@ -316,7 +314,7 @@
   }
 
   /* ════════════════════════════════════════
-     S — SOLUÇÃO  (StoryBrand: O Guia aparece)
+     GUIA
   ════════════════════════════════════════ */
   .guia {
     padding: 120px 24px;
@@ -329,7 +327,6 @@
     gap:80px; align-items:start;
   }
 
-  /* Empatia — o guia ENTENDE o herói */
   .guia-empatia h2 {
     font-family:'Cinzel',serif;
     font-size:clamp(24px,4vw,40px);
@@ -344,7 +341,6 @@
   }
   .guia-empatia p strong { color:var(--white); }
 
-  /* Autoridade — o guia TEM O MÉTODO */
   .guia-autoridade {
     border-left:1px solid rgba(201,168,76,.15);
     padding-left:56px;
@@ -373,7 +369,7 @@
   }
 
   /* ════════════════════════════════════════
-     S — O PLANO  (StoryBrand: o guia dá um plano claro)
+     PLANO
   ════════════════════════════════════════ */
   .plano {
     padding:120px 24px;
@@ -419,7 +415,7 @@
   }
 
   /* ════════════════════════════════════════
-     T — TESTEMUNHO / TRANSIÇÃO
+     TESTEMUNHO
   ════════════════════════════════════════ */
   .testemunho {
     padding:100px 24px;
@@ -428,6 +424,7 @@
     border-bottom:1px solid rgba(201,168,76,.1);
   }
 
+  /* Grid agora com apenas 2 cards reais — 1 coluna em desktop fica melhor, mas mantemos 2 */
   .feedback-grid {
     display:grid; grid-template-columns:1fr 1fr;
     gap:2px; margin-top:48px;
@@ -462,20 +459,8 @@
     color:var(--white-40); margin-top:4px;
   }
 
-  /* placeholder */
-  .feedback-placeholder {
-    display:flex; align-items:center; justify-content:center;
-    padding:60px 40px; border:1px dashed rgba(201,168,76,.2);
-    background:transparent;
-  }
-  .feedback-placeholder p {
-    font-family:'Cinzel',serif; font-size:10px;
-    letter-spacing:3px; color:rgba(201,168,76,.3);
-    text-transform:uppercase; text-align:center;
-  }
-
   /* ════════════════════════════════════════
-     O — OFERTA
+     OFERTA
   ════════════════════════════════════════ */
   .oferta {
     padding:140px 24px;
@@ -576,7 +561,7 @@
   }
 
   /* ════════════════════════════════════════
-     R — RESPOSTA  (CTA Final com Fracasso vs Sucesso)
+     RESPOSTA
   ════════════════════════════════════════ */
   .resposta {
     padding:140px 24px;
@@ -660,20 +645,36 @@
   }
 
   /* ─── FOOTER ─── */
-  footer {
-    padding:36px 24px;
-    border-top:1px solid rgba(201,168,76,.07);
-    text-align:center;
+  footer { padding: 56px 24px; border-top: 1px solid rgba(201,168,76,.07); }
+  .footer-inner {
+    max-width: 860px; margin: 0 auto;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 20px; text-align: center;
   }
-  footer p {
-    font-family:'Cinzel',serif; font-size:9px;
-    letter-spacing:3px; text-transform:uppercase;
-    color:rgba(245,242,236,.18);
+  .footer-brand {
+    font-family: 'Cinzel', serif; font-size: 13px;
+    letter-spacing: 4px; text-transform: uppercase;
+    color: rgba(245,242,236,.3);
+  }
+  .footer-links {
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer-links a {
+    display: flex; align-items: center; gap: 7px;
+    font-family: 'Cinzel', serif; font-size: 9px;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: rgba(245,242,236,.35); text-decoration: none;
+    transition: color .2s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-dot { color: rgba(201,168,76,.25); font-size: 12px; }
+  .footer-copy {
+    font-family: 'Lato', sans-serif; font-size: 10px;
+    letter-spacing: 1px; color: rgba(245,242,236,.15);
   }
 
   /* ─── IMAGENS DE FUNDO ─── */
-
-  /* Hero — homem em biblioteca / escritório escuro */
   .hero-bg-img {
     position: absolute; inset: 0; z-index: 0;
     background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1600&q=80&auto=format&fit=crop');
@@ -682,7 +683,6 @@
     filter: grayscale(100%) contrast(1.3);
   }
 
-  /* Amplify — natureza orgânica, névoa */
   .amplify-bg {
     position: absolute; inset: 0; z-index: 0;
     background-image: url('https://images.unsplash.com/photo-1511497584788-876760111969?w=1600&q=80&auto=format&fit=crop');
@@ -691,7 +691,6 @@
     filter: grayscale(100%) contrast(1.4);
   }
 
-  /* Guia — estátua de mármore / estoicismo */
   .guia-bg {
     position: absolute; inset: 0; z-index: 0;
     background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80&auto=format&fit=crop');
@@ -700,7 +699,6 @@
     filter: grayscale(100%) contrast(1.5);
   }
 
-  /* Testemunho — lareira / cabana / proteção */
   .testemunho-bg {
     position: absolute; inset: 0; z-index: 0;
     background-image: url('https://images.unsplash.com/photo-1504593811423-6dd665756598?w=1600&q=80&auto=format&fit=crop');
@@ -709,7 +707,6 @@
     filter: grayscale(100%) contrast(1.3);
   }
 
-  /* Resposta — montanha com névoa, isolamento */
   .resposta-bg {
     position: absolute; inset: 0; z-index: 0;
     background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80&auto=format&fit=crop');
@@ -718,7 +715,6 @@
     filter: grayscale(100%) contrast(1.4);
   }
 
-  /* Oferta — livros antigos / manuscritos */
   .oferta-bg {
     position: absolute; inset: 0; z-index: 0;
     background-image: url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=1600&q=80&auto=format&fit=crop');
@@ -727,14 +723,12 @@
     filter: grayscale(100%) contrast(1.3);
   }
 
-  /* posicionamento relativo nas seções que recebem bg */
   .amplify   { position: relative; }
   .guia      { position: relative; }
   .testemunho{ position: relative; }
   .oferta    { position: relative; }
   .resposta  { position: relative; }
 
-  /* garantir que conteúdo fique acima do bg */
   .amplify   > .container,
   .guia      > .container,
   .testemunho> .container,
@@ -773,34 +767,45 @@
   }
   .header-social a:hover { color: var(--gold); }
 
-  /* ─── FOOTER ATUALIZADO ─── */
-  footer { padding: 56px 24px; border-top: 1px solid rgba(201,168,76,.07); }
-  .footer-inner {
-    max-width: 860px; margin: 0 auto;
-    display: flex; flex-direction: column;
-    align-items: center; gap: 20px; text-align: center;
+  /* ════════════════════════════════════════
+     STICKY CTA — MOBILE ONLY
+  ════════════════════════════════════════ */
+  .sticky-cta {
+    display: none; /* escondido por padrão */
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 200;
+    padding: 12px 20px 16px;
+    background: rgba(0,0,0,.96);
+    border-top: 1px solid rgba(201,168,76,.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transform: translateY(100%);
+    transition: transform .4s ease;
   }
-  .footer-brand {
-    font-family: 'Cinzel', serif; font-size: 13px;
-    letter-spacing: 4px; text-transform: uppercase;
-    color: rgba(245,242,236,.3);
+  .sticky-cta.visible {
+    transform: translateY(0);
   }
-  .footer-links {
-    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
-    justify-content: center;
+  .sticky-cta a {
+    display: block;
+    width: 100%;
+    padding: 16px 24px;
+    background: var(--gold);
+    border: 1px solid var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 10px; letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--black);
+    text-decoration: none;
+    text-align: center;
+    position: relative; overflow: hidden;
   }
-  .footer-links a {
-    display: flex; align-items: center; gap: 7px;
-    font-family: 'Cinzel', serif; font-size: 9px;
-    letter-spacing: 3px; text-transform: uppercase;
-    color: rgba(245,242,236,.35); text-decoration: none;
-    transition: color .2s;
-  }
-  .footer-links a:hover { color: var(--gold); }
-  .footer-dot { color: rgba(201,168,76,.25); font-size: 12px; }
-  .footer-copy {
-    font-family: 'Lato', sans-serif; font-size: 10px;
-    letter-spacing: 1px; color: rgba(245,242,236,.15);
+  .sticky-cta-meta {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px; letter-spacing: 1px;
+    color: var(--white-40); text-transform: uppercase;
+    text-align: center;
+    margin-top: 8px;
   }
 
   /* ─── RESPONSIVO ─── */
@@ -813,10 +818,24 @@
     .book-mock { max-width:240px; margin:0 auto; }
     section, .hero, .oferta, .resposta { padding:80px 24px; }
     .plano .serif-body { margin-bottom:40px; }
+
+    /* Mostrar sticky CTA apenas em mobile */
+    .sticky-cta { display: block; }
+
+    /* Espaço extra no bottom para não sobrepor conteúdo */
+    body { padding-bottom: 90px; }
   }
 </style>
 </head>
 <body>
+
+<!-- ══ STICKY CTA — MOBILE ══ -->
+<div class="sticky-cta" id="sticky-cta">
+  <a href="https://chk.eduzz.com/8WPA423YWP" target="_blank">
+    Assumir o Governo — R$ 21,90
+  </a>
+  <p class="sticky-cta-meta">Acesso imediato · Plataforma segura</p>
+</div>
 
 <!-- ══ HEADER FIXO ══ -->
 <header id="site-header">
@@ -836,8 +855,7 @@
 </header>
 
 <!-- ══════════════════
-  P — PESSOA / PROBLEMA
-  StoryBrand: O Herói (cliente) no centro, com o Dragão visível
+  HERO
 ════════════════════ -->
 <section class="hero">
   <div class="hero-bg"></div>
@@ -845,7 +863,6 @@
   <div class="hero-inner">
     <p class="hero-tag">Lar Sobre a Rocha &nbsp;·&nbsp; @larsobrea_rocha</p>
 
-    <!-- O herói se reconhece nesta frase -->
     <p class="hero-diagnosis">
       Você trabalha, paga as contas, não trai — e ainda assim é um estranho na própria casa.
     </p>
@@ -853,7 +870,6 @@
     <h1>Plano<br>Diretor</h1>
     <p class="hero-sub">O Governo do Lar</p>
 
-    <!-- Promessa de transformação para o HERÓI -->
     <p class="hero-promise">
       Um método para você sair da omissão e assumir o governo do seu território —
       como <strong>Sacerdote, Provedor e Patriarca</strong>.
@@ -869,8 +885,7 @@
 
 
 <!-- ══════════════════
-  P — AMPLIFICAR O PROBLEMA
-  StoryBrand: Dragão Externo + Interno + Filosófico
+  PROBLEMA
 ════════════════════ -->
 <section class="problema">
   <div class="container">
@@ -905,8 +920,7 @@
 
 
 <!-- ══════════════════
-  A — AMPLIFICAR O CUSTO DO NÃO-AGIR
-  StoryBrand: mostrar o fracasso caso o herói não aja
+  AMPLIFY
 ════════════════════ -->
 <section class="amplify">
   <div class="amplify-bg"></div>
@@ -943,15 +957,13 @@
 
 
 <!-- ══════════════════
-  S — SOLUÇÃO: O GUIA APARECE
-  StoryBrand: Empatia + Autoridade. Você NÃO é o herói — você é Gandalf.
+  GUIA
 ════════════════════ -->
 <section class="guia">
   <div class="guia-bg"></div>
   <div class="container">
     <div class="guia-inner">
 
-      <!-- Empatia: o guia esteve lá -->
       <div class="guia-empatia reveal">
         <span class="eyebrow">O Guia</span>
         <h2>Nós conhecemos<br>o terreno.</h2>
@@ -972,7 +984,6 @@
         </p>
       </div>
 
-      <!-- Autoridade: o guia tem o método -->
       <div class="guia-autoridade reveal d1">
         <h3>Os três pilares do método</h3>
 
@@ -1007,8 +1018,7 @@
 
 
 <!-- ══════════════════
-  S — O PLANO
-  StoryBrand: O guia dá ao herói um plano claro, simples e confiável
+  PLANO
 ════════════════════ -->
 <section class="plano">
   <div class="container">
@@ -1043,8 +1053,7 @@
 
 
 <!-- ══════════════════
-  T — TESTEMUNHO / TRANSIÇÃO
-  Feedbacks informais + espaço reservado
+  TESTEMUNHO — apenas feedbacks reais
 ════════════════════ -->
 <section class="testemunho">
   <div class="testemunho-bg"></div>
@@ -1058,7 +1067,6 @@
     </div>
 
     <div class="feedback-grid">
-      <!-- Feedback real informal — adapte o texto conforme os feedbacks que você tem -->
       <div class="feedback-card reveal">
         <p class="feedback-text">
           "Li de uma vez. Cada capítulo foi um soco certeiro. Não é mais um conteúdo de motivação — é um diagnóstico. E doeu do jeito certo."
@@ -1074,23 +1082,13 @@
         <span class="feedback-name">Leitor do Plano Diretor</span>
         <p class="feedback-note">Feedback via Instagram</p>
       </div>
-
-      <!-- Placeholder para depoimento futuro -->
-      <div class="feedback-placeholder reveal">
-        <p>Seu depoimento aqui.<br>Entre em contato via @larsobrea_rocha.</p>
-      </div>
-
-      <div class="feedback-placeholder reveal d1">
-        <p>Seu depoimento aqui.<br>Entre em contato via @larsobrea_rocha.</p>
-      </div>
     </div>
   </div>
 </section>
 
 
 <!-- ══════════════════
-  O — OFERTA
-  O que o herói recebe exatamente
+  OFERTA
 ════════════════════ -->
 <section class="oferta" id="comprar">
   <div class="oferta-bg"></div>
@@ -1137,8 +1135,7 @@
 
 
 <!-- ══════════════════
-  R — RESPOSTA  (CTA Final)
-  StoryBrand: Fracasso vs Sucesso + Chamado direto à ação
+  RESPOSTA
 ════════════════════ -->
 <section class="resposta">
   <div class="resposta-bg"></div>
@@ -1210,6 +1207,7 @@
 </footer>
 
 <script>
+  // Reveal on scroll
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
@@ -1220,7 +1218,23 @@
   window.addEventListener('scroll', () => {
     header.classList.toggle('scrolled', window.scrollY > 60);
   }, { passive: true });
+
+  // Sticky CTA — aparece após rolar 400px, some perto do botão de compra
+  const stickyCta = document.getElementById('sticky-cta');
+  const ofertaSection = document.getElementById('comprar');
+
+  window.addEventListener('scroll', () => {
+    if (!stickyCta) return;
+    const scrollY = window.scrollY;
+    const ofertaTop = ofertaSection ? ofertaSection.getBoundingClientRect().top + scrollY : Infinity;
+
+    // Aparece após 400px e some quando chega na seção de compra
+    if (scrollY > 400 && scrollY < ofertaTop - 100) {
+      stickyCta.classList.add('visible');
+    } else {
+      stickyCta.classList.remove('visible');
+    }
+  }, { passive: true });
 </script>
 </body>
-
 </html>
