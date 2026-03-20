@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordem de Serviço Enviada — Lar Sobre a Rocha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: #0D0D0D;
+      color: #F1EFE8;
+      font-family: 'Lato', Helvetica, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+    }
+
+    .wrapper {
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .marca {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #B4B2A9;
+      margin-bottom: 48px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .icone {
+      font-size: 32px;
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .divisor-dourado {
+      width: 48px;
+      height: 1px;
+      background-color: #BA7517;
+      margin: 0 auto 32px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 700;
+      color: #F1EFE8;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .subtitulo {
+      font-size: 15px;
+      color: #B4B2A9;
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+
+    .bloco-proximo {
+      background-color: #1A1A1A;
+      border: 0.5px solid #2C2C2A;
+      border-left: 2px solid #BA7517;
+      padding: 28px 32px;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
+    .bloco-proximo p {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #BA7517;
+      margin-bottom: 12px;
+    }
+
+    .bloco-proximo h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 20px;
+      color: #F1EFE8;
+      font-weight: 700;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .bloco-proximo span {
+      font-size: 14px;
+      color: #B4B2A9;
+      line-height: 1.8;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .lista-items {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .lista-items li {
+      font-size: 13px;
+      color: #B4B2A9;
+      line-height: 1.8;
+      padding: 6px 0;
+      border-bottom: 0.5px solid #2C2C2A;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .lista-items li:last-child {
+      border-bottom: none;
+    }
+
+    .lista-items li::before {
+      content: "→";
+      color: #BA7517;
+      font-size: 12px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .btn-principal {
+      display: block;
+      padding: 16px 32px;
+      background-color: #F1EFE8;
+      color: #0D0D0D;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .btn-principal:hover {
+      background-color: #BA7517;
+      color: #F1EFE8;
+    }
+
+    .btn-preco {
+      font-size: 11px;
+      color: #5F5E5A;
+      margin-top: 10px;
+      display: block;
+      text-align: center;
+      font-style: italic;
+    }
+
+    .divisor {
+      width: 100%;
+      height: 0.5px;
+      background-color: #2C2C2A;
+      margin: 40px 0;
+    }
+
+    .instrucao {
+      font-size: 15px;
+      color: #B4B2A9;
+      line-height: 2;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    .instrucao strong {
+      color: #F1EFE8;
+      font-weight: 400;
+    }
+
+    .instrucao p {
+      margin-bottom: 16px;
+    }
+
+    .versic {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 12px;
+      color: #2C2C2A;
+      font-style: italic;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .rodape-links {
+      font-size: 11px;
+      color: #5F5E5A;
+    }
+
+    .rodape-links a {
+      color: #B4B2A9;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .rodape-links a:hover {
+      color: #F1EFE8;
+    }
+
+    @media (max-width: 480px) {
+      .bloco-proximo { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <a href="https://larsobrearocha.vercel.app" class="marca">
+      Lar Sobre a Rocha
+    </a>
+
+    <span class="icone">🛡️</span>
+
+    <div class="divisor-dourado"></div>
+
+    <h1>A Ordem de Serviço está a caminho.</h1>
+
+    <p class="subtitulo">
+      Verifique o seu e-mail agora — o documento chegará em instantes.<br>
+      Se não encontrar na caixa de entrada, verifique o spam.
+    </p>
+
+    <div class="divisor"></div>
+
+    <div class="instrucao">
+      <p>Enquanto o documento não chega, leia isto com atenção.</p>
+      <p>A <strong>Primeira Ordem de Serviço</strong> tem três protocolos.<br>
+      Você tem <strong>24 horas</strong> para executar os três.<br>
+      Não é sugestão. É uma ordem de serviço.</p>
+      <p>Se você ler e não agir, guardou mais um PDF na gaveta.</p>
+      <p>Se você agir, vai entender em 24 horas por que o método funciona.</p>
+    </div>
+
+    <div class="bloco-proximo">
+      <p>Próximo passo</p>
+      <h2>O método completo está aqui.</h2>
+      <span>
+        A Primeira Ordem de Serviço é o início. O Plano Diretor é a fundação completa — cinco capítulos de engenharia espiritual e doméstica para quem decidiu que o improviso termina hoje.
+      </span>
+      <ul class="lista-items">
+        <li>E-book completo em PDF — 34 páginas de engenharia prática</li>
+        <li>5 Protocolos de Execução Imediata</li>
+        <li>Fundação espiritual, doméstica e financeira do lar</li>
+        <li>Matriz de objeções — as desculpas que você usa e como destruí-las</li>
+        <li>Acesso imediato após a compra</li>
+      </ul>
+      <a href="https://chk.eduzz.com/8WPA423YWP" class="btn-principal">
+        Assumir o Governo — R$ 21,90
+      </a>
+      <span class="btn-preco">Pagamento único · Sem recorrência · PDF entregue imediatamente</span>
+    </div>
+
+    <div class="divisor"></div>
+
+    <p class="versic">
+      "Qualquer, pois, que ouvir estas minhas palavras e as praticar,<br>
+      será semelhante a um homem prudente que edificou a sua casa sobre a rocha."<br>
+      — Mt 7,24
+    </p>
+
+    <div class="rodape-links">
+      <a href="https://www.instagram.com/larsobrea_rocha">Instagram</a> ·
+      <a href="https://www.tiktok.com/@LarSobreA_Rocha">TikTok</a> ·
+      <a href="https://raizforte.substack.com">Substack</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
